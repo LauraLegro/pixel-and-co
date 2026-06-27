@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pixel & Co. — boutique web development studio. Clean code, sharp design, zero fluff." />
+  <title>Pixel &amp; Co. — Web Development Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="pc-nav">
+    <div class="pc-nav-logo">PIXEL &amp; CO.</div>
+    <ul class="pc-nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="pc-nav-hamburger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="pc-mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO — fake browser chrome -->
+  <div class="pc-browser-wrap">
+    <div class="pc-browser">
+      <div class="pc-browser-bar">
+        <div class="pc-browser-btn-row">
+          <div class="pc-browser-btn close"></div>
+          <div class="pc-browser-btn min"></div>
+          <div class="pc-browser-btn max"></div>
+        </div>
+        <div class="pc-browser-nav-btns">
+          <div class="pc-browser-nav-btn">&#9664;</div>
+          <div class="pc-browser-nav-btn">&#9654;</div>
+          <div class="pc-browser-nav-btn">&#x27F3;</div>
+        </div>
+        <div class="pc-url-bar">http://pixelandco.com/welcome.html</div>
+        <button class="pc-browser-go">GO</button>
+      </div>
+      <div class="pc-hero-content">
+        <p class="pc-hero-eyebrow">// Est. right now &middot; Santa Rosa, CA</p>
+        <h1 class="pc-hero-headline">
+          We Build<br>
+          <span class="accent">Websites</span><br>
+          That Work<span class="pc-cursor"></span>
+        </h1>
+        <p class="pc-hero-sub">
+          Pixel &amp; Co. is a boutique web development studio. Clean code, sharp design,
+          zero fluff &mdash; from landing pages to full-stack builds.
+        </p>
+        <div class="pc-hero-cta-row">
+          <a href="#contact" class="pc-btn-primary">Start a Project</a>
+          <a href="#work" class="pc-btn-secondary">See Our Work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="pc-ticker-wrap" aria-hidden="true">
+    <span class="pc-ticker">
+      &nbsp;&nbsp;&#10022; HTML &nbsp;&nbsp;&#10022; CSS &nbsp;&nbsp;&#10022; JAVASCRIPT &nbsp;&nbsp;&#10022; REACT &nbsp;&nbsp;&#10022; NODE.JS &nbsp;&nbsp;&#10022; EXPRESS &nbsp;&nbsp;&#10022; RESPONSIVE DESIGN &nbsp;&nbsp;&#10022; SEO OPTIMIZATION &nbsp;&nbsp;&#10022; FAST LOADING &nbsp;&nbsp;&#10022; CLEAN CODE &nbsp;&nbsp;&#10022; REAL HUMANS &nbsp;&nbsp;&#10022; HTML &nbsp;&nbsp;&#10022; CSS &nbsp;&nbsp;&#10022; JAVASCRIPT &nbsp;&nbsp;&#10022; REACT &nbsp;&nbsp;
+    </span>
+  </div>
+
+  <div class="pc-divider" aria-hidden="true">&middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+  <!-- SERVICES -->
+  <section class="pc-section" id="services">
+    <p class="pc-section-label">// What we do</p>
+    <h2 class="pc-section-title">Services</h2>
+    <div class="pc-services">
+      <div class="pc-service-card">
+        <div class="pc-service-icon">[WEB]</div>
+        <div class="pc-service-title">Web Development</div>
+        <p class="pc-service-desc">Custom-built sites from scratch &mdash; HTML/CSS/JS, React, or whatever your project needs. No bloated page builders.</p>
+      </div>
+      <div class="pc-service-card">
+        <div class="pc-service-icon">[UX]</div>
+        <div class="pc-service-title">UI/UX Design</div>
+        <p class="pc-service-desc">Wireframes to polished interfaces. Designed for real people, not just portfolios.</p>
+      </div>
+      <div class="pc-service-card">
+        <div class="pc-service-icon">[API]</div>
+        <div class="pc-service-title">Full-Stack Builds</div>
+        <p class="pc-service-desc">Node, Express, APIs, databases &mdash; when your project needs a backend that doesn't break.</p>
+      </div>
+      <div class="pc-service-card">
+        <div class="pc-service-icon">[SEO]</div>
+        <div class="pc-service-title">Performance + SEO</div>
+        <p class="pc-service-desc">Fast, accessible, and findable. Because a beautiful site nobody can find is just an art project.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="pc-divider" aria-hidden="true">&middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+  <!-- PORTFOLIO -->
+  <section class="pc-portfolio-wrap" id="work">
+    <div class="pc-portfolio-inner">
+      <p class="pc-section-label">// Selected projects</p>
+      <h2 class="pc-section-title">Work</h2>
+      <div class="pc-portfolio-grid">
+
+        <a class="pc-project-card" href="https://pollyglot-app-1.netlify.app/" target="_blank" rel="noopener noreferrer">
+          <div class="pc-project-header">
+            <div class="pc-project-dots">
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+            </div>
+            <span class="pc-project-tag">AI / REACT</span>
+          </div>
+          <div class="pc-project-body">
+            <div class="pc-project-title">Polyglot</div>
+            <p class="pc-project-desc">An AI-powered language learning app. Conversational practice with real-time AI responses. Scrimba AI Engineer capstone.</p>
+            <div class="pc-project-stack">
+              <span class="pc-stack-tag">React</span>
+              <span class="pc-stack-tag">Claude API</span>
+              <span class="pc-stack-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="pc-project-footer">
+            <span class="pc-project-visit">&#8599; pollyglot-app-1.netlify.app</span>
+            <span class="pc-project-arrow">&#9658;&#9658;</span>
+          </div>
+        </a>
+
+        <a class="pc-project-card" href="https://omnifood-laura-legro.netlify.app/" target="_blank" rel="noopener noreferrer">
+          <div class="pc-project-header">
+            <div class="pc-project-dots">
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+            </div>
+            <span class="pc-project-tag">FRONTEND</span>
+          </div>
+          <div class="pc-project-body">
+            <div class="pc-project-title">Omnifood</div>
+            <p class="pc-project-desc">Premium responsive landing page for an AI-powered food subscription service. Modern HTML5, CSS Grid &amp; Flexbox, vanilla JS.</p>
+            <div class="pc-project-stack">
+              <span class="pc-stack-tag">HTML5</span>
+              <span class="pc-stack-tag">CSS3</span>
+              <span class="pc-stack-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="pc-project-footer">
+            <span class="pc-project-visit">&#8599; omnifood-laura-legro.netlify.app</span>
+            <span class="pc-project-arrow">&#9658;&#9658;</span>
+          </div>
+        </a>
+
+        <a class="pc-project-card" href="https://music-blog-26.netlify.app/" target="_blank" rel="noopener noreferrer">
+          <div class="pc-project-header">
+            <div class="pc-project-dots">
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+            </div>
+            <span class="pc-project-tag">FULL-STACK</span>
+          </div>
+          <div class="pc-project-body">
+            <div class="pc-project-title">Music Blog</div>
+            <p class="pc-project-desc">A deployed music blog with server-side rendering, dynamic routing, and serverless functions &mdash; built without a framework from scratch.</p>
+            <div class="pc-project-stack">
+              <span class="pc-stack-tag">Node.js</span>
+              <span class="pc-stack-tag">Express</span>
+              <span class="pc-stack-tag">EJS</span>
+              <span class="pc-stack-tag">Netlify</span>
+            </div>
+          </div>
+          <div class="pc-project-footer">
+            <span class="pc-project-visit">&#8599; music-blog-26.netlify.app</span>
+            <span class="pc-project-arrow">&#9658;&#9658;</span>
+          </div>
+        </a>
+
+        <a class="pc-project-card" href="https://lauralegro.github.io/github-repo-gallery-main/" target="_blank" rel="noopener noreferrer">
+          <div class="pc-project-header">
+            <div class="pc-project-dots">
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+            </div>
+            <span class="pc-project-tag">FRONTEND</span>
+          </div>
+          <div class="pc-project-body">
+            <div class="pc-project-title">GitHub Repo Gallery</div>
+            <p class="pc-project-desc">Pulls live GitHub repo data via the GitHub API and displays it as a searchable, filterable gallery. Dynamic and API-driven.</p>
+            <div class="pc-project-stack">
+              <span class="pc-stack-tag">JavaScript</span>
+              <span class="pc-stack-tag">GitHub API</span>
+              <span class="pc-stack-tag">CSS3</span>
+            </div>
+          </div>
+          <div class="pc-project-footer">
+            <span class="pc-project-visit">&#8599; lauralegro.github.io</span>
+            <span class="pc-project-arrow">&#9658;&#9658;</span>
+          </div>
+        </a>
+
+        <a class="pc-project-card github-only" href="https://github.com/LauraLegro" target="_blank" rel="noopener noreferrer">
+          <div class="pc-project-header">
+            <div class="pc-project-dots">
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+            </div>
+            <span class="pc-project-tag">FULL-STACK</span>
+          </div>
+          <div class="pc-project-body">
+            <div class="pc-project-title">Gift Genie</div>
+            <p class="pc-project-desc">AI-powered gift recommendation app. Enter a person and occasion, get tailored gift ideas via OpenAI. Vite frontend + Express backend.</p>
+            <div class="pc-project-stack">
+              <span class="pc-stack-tag">Vite</span>
+              <span class="pc-stack-tag">JavaScript</span>
+              <span class="pc-stack-tag">Express</span>
+              <span class="pc-stack-tag">OpenAI API</span>
+            </div>
+          </div>
+          <div class="pc-project-footer">
+            <span class="pc-project-visit">&#8599; github.com/LauraLegro</span>
+            <span class="pc-project-arrow">&#9658;&#9658;</span>
+          </div>
+        </a>
+
+        <a class="pc-project-card github-only" href="https://github.com/LauraLegro" target="_blank" rel="noopener noreferrer">
+          <div class="pc-project-header">
+            <div class="pc-project-dots">
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+              <div class="pc-project-dot"></div>
+            </div>
+            <span class="pc-project-tag">INTERACTIVE</span>
+          </div>
+          <div class="pc-project-body">
+            <div class="pc-project-title">CodeQuest</div>
+            <p class="pc-project-desc">A JavaScript learning game with quiz mechanics and progressive challenges. Built to make learning to code less painful.</p>
+            <div class="pc-project-stack">
+              <span class="pc-stack-tag">JavaScript</span>
+              <span class="pc-stack-tag">HTML5</span>
+              <span class="pc-stack-tag">CSS3</span>
+            </div>
+          </div>
+          <div class="pc-project-footer">
+            <span class="pc-project-visit">&#8599; github.com/LauraLegro</span>
+            <span class="pc-project-arrow">&#9658;&#9658;</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="pc-portfolio-cta">
+        <a href="https://github.com/LauraLegro" target="_blank" rel="noopener noreferrer" class="pc-btn-secondary">
+          View All 59 Repos on GitHub &gt;&gt;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="pc-divider" aria-hidden="true">&middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+  <!-- ABOUT -->
+  <section class="pc-about-wrap" id="about">
+    <div class="pc-about-inner">
+      <div class="pc-terminal" aria-label="Terminal window">
+        <div class="pc-terminal-title">TERMINAL v2.0 &mdash; PIXEL &amp; CO.</div>
+        <div class="pc-terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+        <div class="pc-terminal-line"><span class="out">&rarr; boutique web dev studio</span></div>
+        <div class="pc-terminal-line"><span class="prompt">$</span> <span class="cmd">ls skills/</span></div>
+        <div class="pc-terminal-line"><span class="out">&rarr; html css js react node</span></div>
+        <div class="pc-terminal-line"><span class="prompt">$</span> <span class="cmd">cat values.txt</span></div>
+        <div class="pc-terminal-line"><span class="out">&rarr; clean &middot; honest &middot; fast</span></div>
+        <div class="pc-terminal-line"><span class="prompt">$</span> <span class="cmd">./start_project<span class="pc-cursor"></span></span></div>
+      </div>
+      <div class="pc-about-text">
+        <p class="pc-section-label">// Who we are</p>
+        <h2 class="pc-section-title pc-about-heading">Small studio.<br>Big output.</h2>
+        <p class="pc-about-p">
+          Pixel &amp; Co. is a one-person web development studio based in Sonoma County, CA.
+          We work with small businesses, founders, and creatives who need a real website &mdash;
+          not a template with a logo slapped on it.
+        </p>
+        <p class="pc-about-p">
+          Every project gets real attention. No hand-offs, no disappearing after launch.
+        </p>
+        <a href="#contact" class="pc-btn-secondary">Work With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="pc-section">
+    <p class="pc-section-label">// How it works</p>
+    <h2 class="pc-section-title">The Process</h2>
+    <div class="pc-process">
+      <div class="pc-step">
+        <div class="pc-step-num">01</div>
+        <div class="pc-step-title">Discovery</div>
+        <p class="pc-step-desc">We talk. You explain what you need. No jargon, no sales pitch.</p>
+      </div>
+      <div class="pc-step">
+        <div class="pc-step-num">02</div>
+        <div class="pc-step-title">Design</div>
+        <p class="pc-step-desc">Wireframes and mockups before a single line of code is written.</p>
+      </div>
+      <div class="pc-step">
+        <div class="pc-step-num">03</div>
+        <div class="pc-step-title">Build</div>
+        <p class="pc-step-desc">Clean, hand-written code. You see progress as it happens.</p>
+      </div>
+      <div class="pc-step">
+        <div class="pc-step-num">04</div>
+        <div class="pc-step-title">Launch</div>
+        <p class="pc-step-desc">Deployed, tested, and handed off with full documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="pc-divider" aria-hidden="true">&middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot; &middot;</div>
+
+  <!-- CONTACT -->
+  <section class="pc-contact-wrap" id="contact">
+    <div class="pc-contact-inner">
+      <p class="pc-section-label pc-center">// Get in touch</p>
+      <h2 class="pc-section-title pc-center pc-contact-heading">Start a Project</h2>
+      <form class="pc-contact-form" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <div>
+          <label class="pc-field-label" for="name">NAME:</label>
+          <input class="pc-input" type="text" id="name" name="name" placeholder="your name here" required />
+        </div>
+        <div>
+          <label class="pc-field-label" for="email">EMAIL:</label>
+          <input class="pc-input" type="email" id="email" name="email" placeholder="you@email.com" required />
+        </div>
+        <div>
+          <label class="pc-field-label" for="message">TELL ME ABOUT YOUR PROJECT:</label>
+          <textarea class="pc-textarea" id="message" name="message" placeholder="What are you building?"></textarea>
+        </div>
+        <button type="submit" class="pc-contact-btn">Send Message &gt;&gt;</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="pc-footer">
+    <div class="pc-footer-logo">PIXEL &amp; CO.</div>
+    <ul class="pc-footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="https://github.com/LauraLegro" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="pc-footer-copy">&copy; 2026 Pixel &amp; Co. &middot; Legro Digital LLC &middot; All rights reserved</p>
+    <div class="pc-under-construction" aria-hidden="true">&#9888; SITE UNDER CONSTRUCTION &#9888;</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
