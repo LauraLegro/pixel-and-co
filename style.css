@@ -4,7 +4,9 @@
    ============================================= */
 
 /* RESET & BASE */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -15,16 +17,17 @@ html {
 }
 
 body {
-  background: #0A0A2E;
-  color: #F0EDE0;
-  font-family: 'Space Mono', monospace;
+  background: linear-gradient(180deg, #f5efdc 0%, #f0e5ec 45%, #e6d5f2 100%);
+  background-attachment: fixed;
+  color: #2a1a4a;
+  font-family: "Space Mono", monospace;
   overflow-x: hidden;
   position: relative;
 }
 
 /* CRT scanline overlay */
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -43,19 +46,43 @@ body::before {
 
 /* ANIMATIONS */
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes ticker {
-  from { transform: translateX(100vw); }
-  to   { transform: translateX(-100%); }
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  @keyframes blink  { 0%, 100% { opacity: 1; } }
-  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(0); } }
-  .pc-ticker { animation: none; white-space: normal; }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes ticker {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .pc-ticker {
+    animation: none;
+    white-space: normal;
+  }
 }
 
 /* =============================================
@@ -66,7 +93,7 @@ body::before {
   display: inline-block;
   width: 0.6em;
   height: 1em;
-  background: #9B5DE5;
+  background: #9b5de5;
   vertical-align: -0.1em;
   margin-left: 4px;
   animation: blink 1s step-end infinite;
@@ -81,17 +108,17 @@ body::before {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 2px solid #9B5DE5;
-  background: #0A0A2E;
+  border-bottom: 2px solid #9b5de5;
+  background: #f4eefb;
   position: sticky;
   top: 0;
   z-index: 200;
 }
 
 .pc-nav-logo {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 2rem;
-  color: #9B5DE5;
+  color: #9b5de5;
   letter-spacing: 2px;
 }
 
@@ -102,9 +129,9 @@ body::before {
 }
 
 .pc-nav-links a {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 0.72rem;
-  color: #F0EDE0;
+  color: #2a1a4a;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -113,15 +140,15 @@ body::before {
 
 .pc-nav-links a:hover,
 .pc-nav-links a:focus {
-  color: #9B5DE5;
+  color: #9b5de5;
   outline: none;
 }
 
 .pc-nav-hamburger {
   display: none;
   background: none;
-  border: 2px solid #9B5DE5;
-  color: #9B5DE5;
+  border: 2px solid #9b5de5;
+  color: #9b5de5;
   font-size: 1.2rem;
   padding: 0.25rem 0.6rem;
   cursor: pointer;
@@ -130,8 +157,8 @@ body::before {
 /* MOBILE MENU */
 .pc-mobile-menu {
   display: none;
-  background: #0d0a3a;
-  border-bottom: 2px solid #9B5DE5;
+  background: #f4eefb;
+  border-bottom: 2px solid #9b5de5;
   padding: 1rem 2rem;
 }
 
@@ -147,15 +174,17 @@ body::before {
 }
 
 .pc-mobile-menu a {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.5rem;
-  color: #F0EDE0;
+  color: #2a1a4a;
   text-decoration: none;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-.pc-mobile-menu a:hover { color: #9B5DE5; }
+.pc-mobile-menu a:hover {
+  color: #9b5de5;
+}
 
 /* =============================================
    BROWSER CHROME HERO
@@ -166,19 +195,19 @@ body::before {
 }
 
 .pc-browser {
-  border: 3px solid #9B5DE5;
+  border: 3px solid #9b5de5;
   max-width: 860px;
   margin: 0 auto;
-  background: #0d0d3a;
+  background: #ffffff;
 }
 
 .pc-browser-bar {
-  background: #1a0a40;
+  background: #ede3f7;
   padding: 0.5rem 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  border-bottom: 2px solid #9B5DE5;
+  border-bottom: 2px solid #9b5de5;
   flex-wrap: nowrap;
 }
 
@@ -195,9 +224,15 @@ body::before {
   flex-shrink: 0;
 }
 
-.pc-browser-btn.close { border-color: #FF00AA; }
-.pc-browser-btn.min   { border-color: #FFB800; }
-.pc-browser-btn.max   { border-color: #9B5DE5; }
+.pc-browser-btn.close {
+  border-color: #ff00aa;
+}
+.pc-browser-btn.min {
+  border-color: #ffb800;
+}
+.pc-browser-btn.max {
+  border-color: #9b5de5;
+}
 
 .pc-browser-nav-btns {
   display: flex;
@@ -206,10 +241,10 @@ body::before {
 }
 
 .pc-browser-nav-btn {
-  background: #2a1060;
+  background: #dcc9f0;
   border: 2px solid #4a2a88;
   color: #8866cc;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1rem;
   padding: 0 6px;
   cursor: default;
@@ -219,10 +254,10 @@ body::before {
 .pc-url-bar {
   flex: 1;
   min-width: 0;
-  background: #0A0A2E;
-  border: 2px solid #4a2a88;
-  color: #9B5DE5;
-  font-family: 'Space Mono', monospace;
+  background: #ffffff;
+  border: 2px solid #b89ae0;
+  color: #6b3fa0;
+  font-family: "Space Mono", monospace;
   font-size: 0.7rem;
   padding: 2px 8px;
   letter-spacing: 1px;
@@ -232,10 +267,10 @@ body::before {
 }
 
 .pc-browser-go {
-  background: #9B5DE5;
+  background: #9b5de5;
   border: none;
-  color: #0A0A2E;
-  font-family: 'VT323', monospace;
+  color: #0a0a2e;
+  font-family: "VT323", monospace;
   font-size: 1rem;
   padding: 2px 10px;
   cursor: pointer;
@@ -252,27 +287,29 @@ body::before {
 .pc-hero-eyebrow {
   font-size: 0.7rem;
   letter-spacing: 4px;
-  color: #FF00AA;
+  color: #ff00aa;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
 
 .pc-hero-headline {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: clamp(3rem, 8vw, 5.5rem);
-  color: #F0EDE0;
+  color: #2a1a4a;
   line-height: 1.05;
   margin-bottom: 1rem;
-  text-shadow: 3px 3px 0px #7B3DB5, 6px 6px 0px rgba(155, 93, 229, 0.2);
+  text-shadow:
+    3px 3px 0px #7b3db5,
+    6px 6px 0px rgba(155, 93, 229, 0.2);
 }
 
 .pc-hero-headline .accent {
-  color: #9B5DE5;
+  color: #9b5de5;
 }
 
 .pc-hero-sub {
   font-size: 0.8rem;
-  color: #b0adc0;
+  color: #6b5a85;
   line-height: 1.7;
   max-width: 500px;
   margin: 1.5rem auto 2.5rem;
@@ -291,18 +328,20 @@ body::before {
 
 .pc-btn-primary,
 a.pc-btn-primary {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.3rem;
   letter-spacing: 2px;
-  background: #FF00AA;
-  color: #0A0A2E;
+  background: #ff00aa;
+  color: #0a0a2e;
   border: none;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.15s, transform 0.1s;
+  transition:
+    background 0.15s,
+    transform 0.1s;
 }
 
 .pc-btn-primary:hover,
@@ -313,24 +352,26 @@ a.pc-btn-primary:hover {
 
 .pc-btn-secondary,
 a.pc-btn-secondary {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.3rem;
   letter-spacing: 2px;
   background: transparent;
-  color: #9B5DE5;
-  border: 2px solid #9B5DE5;
+  color: #9b5de5;
+  border: 2px solid #9b5de5;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .pc-btn-secondary:hover,
 a.pc-btn-secondary:hover {
-  background: #9B5DE5;
-  color: #0A0A2E;
+  background: #9b5de5;
+  color: #0a0a2e;
 }
 
 /* =============================================
@@ -338,20 +379,20 @@ a.pc-btn-secondary:hover {
    ============================================= */
 
 .pc-ticker-wrap {
-  background: #7B3DB5;
+  background: #c9a8ee;
   padding: 0.4rem 0;
   overflow: hidden;
   white-space: nowrap;
-  border-top: 2px solid #FFB800;
-  border-bottom: 2px solid #FFB800;
+  border-top: 2px solid #ffb800;
+  border-bottom: 2px solid #ffb800;
 }
 
 .pc-ticker {
   display: inline-block;
   animation: ticker 22s linear infinite;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.1rem;
-  color: #F0EDE0;
+  color: #3d1f66;
   letter-spacing: 3px;
 }
 
@@ -362,11 +403,11 @@ a.pc-btn-secondary:hover {
 .pc-divider {
   text-align: center;
   padding: 0.5rem 0;
-  color: #3a2a6e;
+  color: #b89ad6;
   font-size: 0.7rem;
   letter-spacing: 6px;
-  border-top: 1px dashed #2a1a5e;
-  border-bottom: 1px dashed #2a1a5e;
+  border-top: 1px dashed #d4bdee;
+  border-bottom: 1px dashed #d4bdee;
 }
 
 /* =============================================
@@ -380,23 +421,25 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-section-label {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 0.9rem;
   letter-spacing: 6px;
-  color: #FF00AA;
+  color: #ff00aa;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
 
 .pc-section-title {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #F0EDE0;
+  color: #2a1a4a;
   margin-bottom: 2.5rem;
   line-height: 1.1;
 }
 
-.pc-center { text-align: center; }
+.pc-center {
+  text-align: center;
+}
 
 /* =============================================
    SERVICES
@@ -409,21 +452,21 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-service-card {
-  border: 2px solid #9B5DE5;
+  border: 2px solid #9b5de5;
   padding: 1.5rem;
-  background: #0d0a3a;
+  background: #ffffff;
   position: relative;
   transition: transform 0.15s;
 }
 
 .pc-service-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 4px;
   right: -4px;
   bottom: -4px;
-  border: 2px solid #FF00AA;
+  border: 2px solid #ff00aa;
   z-index: -1;
 }
 
@@ -432,24 +475,24 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-service-icon {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 2.5rem;
-  color: #FFB800;
+  color: #a6680f;
   margin-bottom: 0.75rem;
   line-height: 1;
 }
 
 .pc-service-title {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.4rem;
-  color: #9B5DE5;
+  color: #9b5de5;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
 }
 
 .pc-service-desc {
   font-size: 0.72rem;
-  color: #9090b8;
+  color: #6b5a85;
   line-height: 1.7;
 }
 
@@ -458,9 +501,9 @@ a.pc-btn-secondary:hover {
    ============================================= */
 
 .pc-portfolio-wrap {
-  background: #0d0a3a;
-  border-top: 2px solid #1a0a50;
-  border-bottom: 2px solid #1a0a50;
+  background: #f4eefb;
+  border-top: 2px solid #d4bdee;
+  border-bottom: 2px solid #d4bdee;
 }
 
 .pc-portfolio-inner {
@@ -478,11 +521,13 @@ a.pc-btn-secondary:hover {
 
 /* Full card is an anchor */
 .pc-project-card {
-  background: #0A0A2E;
-  border: 2px solid #4a2a88;
+  background: #ffffff;
+  border: 2px solid #b89ae0;
   position: relative;
   overflow: hidden;
-  transition: transform 0.15s, border-color 0.15s;
+  transition:
+    transform 0.15s,
+    border-color 0.15s;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -491,27 +536,27 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-project-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 4px;
   right: -4px;
   bottom: -4px;
-  border: 2px solid #7B3DB5;
+  border: 2px solid #7b3db5;
   z-index: -1;
 }
 
 .pc-project-card:hover,
 .pc-project-card:focus {
   transform: translate(-3px, -3px);
-  border-color: #9B5DE5;
+  border-color: #9b5de5;
   outline: none;
 }
 
 .pc-project-header {
-  background: #1a0a40;
+  background: #ede3f7;
   padding: 0.75rem 1rem;
-  border-bottom: 2px solid #4a2a88;
+  border-bottom: 2px solid #b89ae0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -529,14 +574,20 @@ a.pc-btn-secondary:hover {
   border-radius: 50%;
 }
 
-.pc-project-dot:nth-child(1) { background: #FF00AA; }
-.pc-project-dot:nth-child(2) { background: #FFB800; }
-.pc-project-dot:nth-child(3) { background: #9B5DE5; }
+.pc-project-dot:nth-child(1) {
+  background: #ff00aa;
+}
+.pc-project-dot:nth-child(2) {
+  background: #ffb800;
+}
+.pc-project-dot:nth-child(3) {
+  background: #9b5de5;
+}
 
 .pc-project-tag {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 0.8rem;
-  color: #9B5DE5;
+  color: #9b5de5;
   letter-spacing: 2px;
 }
 
@@ -546,16 +597,16 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-project-title {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.5rem;
-  color: #F0EDE0;
+  color: #2a1a4a;
   margin-bottom: 0.4rem;
   letter-spacing: 1px;
 }
 
 .pc-project-desc {
   font-size: 0.68rem;
-  color: #8080aa;
+  color: #7a6b92;
   line-height: 1.7;
   margin-bottom: 1rem;
 }
@@ -567,18 +618,18 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-stack-tag {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 0.75rem;
-  background: #1a0a40;
-  color: #9B5DE5;
-  border: 1px solid #4a2a88;
+  background: #ede3f7;
+  color: #6b3fa0;
+  border: 1px solid #b89ae0;
   padding: 2px 8px;
   letter-spacing: 1px;
 }
 
 .pc-project-footer {
   padding: 0.75rem 1.25rem;
-  border-top: 1px solid #2a1a5e;
+  border-top: 1px solid #d4bdee;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -586,9 +637,9 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-project-visit {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 0.9rem;
-  color: #FFB800;
+  color: #a6680f;
   letter-spacing: 2px;
   white-space: nowrap;
   overflow: hidden;
@@ -597,9 +648,9 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-project-arrow {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.2rem;
-  color: #9B5DE5;
+  color: #9b5de5;
   transition: transform 0.15s;
   flex-shrink: 0;
 }
@@ -610,7 +661,7 @@ a.pc-btn-secondary:hover {
 
 /* GitHub-only cards (no live URL) — slightly dimmer */
 .pc-project-card.github-only .pc-project-visit {
-  color: #7766aa;
+  color: #b0a0c8;
 }
 
 .pc-portfolio-cta {
@@ -623,7 +674,7 @@ a.pc-btn-secondary:hover {
    ============================================= */
 
 .pc-about-wrap {
-  background: #0A0A2E;
+  background: #fbf7f0;
 }
 
 .pc-about-inner {
@@ -637,27 +688,33 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-terminal {
-  background: #000010;
-  border: 2px solid #9B5DE5;
+  background: #1a0f33;
+  border: 2px solid #9b5de5;
   padding: 1.25rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 0.7rem;
-  color: #9B5DE5;
+  color: #c9a8ee;
   line-height: 2;
 }
 
 .pc-terminal-title {
-  color: #FFB800;
-  border-bottom: 1px solid #2a1a5e;
+  color: #ffb800;
+  border-bottom: 1px solid #3d2a66;
   padding-bottom: 0.4rem;
   margin-bottom: 0.75rem;
   font-size: 0.65rem;
   letter-spacing: 3px;
 }
 
-.pc-terminal-line .prompt { color: #FF00AA; }
-.pc-terminal-line .cmd    { color: #F0EDE0; }
-.pc-terminal-line .out    { color: #7766aa; }
+.pc-terminal-line .prompt {
+  color: #ff00aa;
+}
+.pc-terminal-line .cmd {
+  color: #f0ede0;
+}
+.pc-terminal-line .out {
+  color: #7766aa;
+}
 
 .pc-about-heading {
   font-size: 2rem;
@@ -666,7 +723,7 @@ a.pc-btn-secondary:hover {
 
 .pc-about-p {
   font-size: 0.75rem;
-  color: #9090b8;
+  color: #5a4a72;
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -684,28 +741,28 @@ a.pc-btn-secondary:hover {
 .pc-step {
   text-align: center;
   padding: 1.5rem 1rem;
-  border: 1px dashed #2a1a5e;
+  border: 1px dashed #d4bdee;
 }
 
 .pc-step-num {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 3rem;
-  color: #FFB800;
+  color: #a6680f;
   line-height: 1;
   margin-bottom: 0.5rem;
 }
 
 .pc-step-title {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.2rem;
-  color: #9B5DE5;
+  color: #9b5de5;
   margin-bottom: 0.4rem;
   letter-spacing: 1px;
 }
 
 .pc-step-desc {
   font-size: 0.68rem;
-  color: #7070a0;
+  color: #7a6b92;
   line-height: 1.6;
 }
 
@@ -714,9 +771,9 @@ a.pc-btn-secondary:hover {
    ============================================= */
 
 .pc-contact-wrap {
-  background: #0d0a3a;
+  background: #f4eefb;
   padding: 4rem 2rem;
-  border-top: 2px solid #1a0a50;
+  border-top: 2px solid #d4bdee;
 }
 
 .pc-contact-inner {
@@ -737,9 +794,9 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-field-label {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1rem;
-  color: #9B5DE5;
+  color: #9b5de5;
   letter-spacing: 2px;
   display: block;
   margin-bottom: 0.25rem;
@@ -750,8 +807,8 @@ a.pc-btn-secondary:hover {
   width: 100%;
   background: #000010;
   border: 2px solid #4a2a88;
-  color: #F0EDE0;
-  font-family: 'Space Mono', monospace;
+  color: #2a1a4a;
+  font-family: "Space Mono", monospace;
   font-size: 0.75rem;
   padding: 0.6rem 0.75rem;
   outline: none;
@@ -760,7 +817,7 @@ a.pc-btn-secondary:hover {
 
 .pc-input:focus,
 .pc-textarea:focus {
-  border-color: #9B5DE5;
+  border-color: #9b5de5;
 }
 
 .pc-textarea {
@@ -769,21 +826,23 @@ a.pc-btn-secondary:hover {
 }
 
 .pc-contact-btn {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.4rem;
   letter-spacing: 3px;
-  background: #9B5DE5;
-  color: #0A0A2E;
+  background: #9b5de5;
+  color: #0a0a2e;
   border: none;
   padding: 0.6rem 2rem;
   cursor: pointer;
   text-transform: uppercase;
   align-self: flex-start;
-  transition: background 0.15s, transform 0.1s;
+  transition:
+    background 0.15s,
+    transform 0.1s;
 }
 
 .pc-contact-btn:hover {
-  background: #7B3DB5;
+  background: #7b3db5;
   transform: translate(-2px, -2px);
 }
 
@@ -792,16 +851,16 @@ a.pc-btn-secondary:hover {
    ============================================= */
 
 .pc-footer {
-  background: #000010;
+  background: #2a1a4a;
   border-top: 2px solid #1a0a50;
   padding: 2rem;
   text-align: center;
 }
 
 .pc-footer-logo {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.8rem;
-  color: #9B5DE5;
+  color: #9b5de5;
   letter-spacing: 3px;
   margin-bottom: 0.5rem;
 }
@@ -817,25 +876,27 @@ a.pc-btn-secondary:hover {
 
 .pc-footer-links a {
   font-size: 0.65rem;
-  color: #5a3a8a;
+  color: #c9a8ee;
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.pc-footer-links a:hover { color: #9B5DE5; }
+.pc-footer-links a:hover {
+  color: #9b5de5;
+}
 
 .pc-footer-copy {
   font-size: 0.65rem;
-  color: #3a2a6e;
+  color: #8a7aa8;
   letter-spacing: 1px;
 }
 
 .pc-under-construction {
   display: inline-block;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 0.85rem;
-  color: #FFB800;
+  color: #ffb800;
   letter-spacing: 2px;
   margin-top: 1rem;
   animation: blink 1.5s step-end infinite;
