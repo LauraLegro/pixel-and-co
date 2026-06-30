@@ -19,8 +19,8 @@ html {
 body {
   background: linear-gradient(180deg, #f5efdc 0%, #db96c1 45%, #9d6dc0 100%);
   background-attachment: fixed;
-  color: #2a1a4a;
-  font-family: "Space Mono", monospace;
+  color: #63489a;
+  font-family: "Space mono", monospace;
   overflow-x: hidden;
   position: relative;
 }
@@ -131,17 +131,19 @@ body::before {
 .pc-nav-links a {
   font-family: "Space Mono", monospace;
   font-size: 0.72rem;
-  color: #2a1a4a;
+  color: #4a2a88;
+  padding: 20px 15px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.4px;
   transition: color 0.15s;
 }
 
 .pc-nav-links a:hover,
 .pc-nav-links a:focus {
-  color: #9b5de5;
+  color: #fff;
   outline: none;
+  background-color: #2a1a4a;
 }
 
 .pc-nav-hamburger {
