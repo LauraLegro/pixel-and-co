@@ -805,7 +805,7 @@ a.pc-btn-secondary:hover {
 .pc-input,
 .pc-textarea {
   width: 100%;
-  background: #000010;
+  background: #fff;
   border: 2px solid #4a2a88;
   color: #2a1a4a;
   font-family: "Space Mono", monospace;
